@@ -29,7 +29,7 @@ body {
     margin-left: 340px;
 }
 
-img {
+.round-img {
     margin: 5px auto;
     width: 200px;
     border-radius: 100px;
@@ -41,4 +41,8 @@ h3 {
 
 span {
     font-weight: bold;
+}
+img {
+    margin: 5px auto;
+    width: 200px;
 }
