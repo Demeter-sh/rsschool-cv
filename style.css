@@ -29,6 +29,10 @@ body {
     margin-left: 340px;
 }
 
+.clear-fix {
+    clear:both
+}
+
 .round-img {
     margin: 5px auto;
     width: 200px;
@@ -42,7 +46,9 @@ h3 {
 span {
     font-weight: bold;
 }
+
 img {
     margin: 5px auto;
     width: 200px;
 }
+
