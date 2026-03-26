@@ -17,6 +17,14 @@
     border: 1px solid black;
 }
 
+/* .work-experience2::before {
+    content: "Creating a page for the Lapkin Lab website using the AmoCRM system -" ;
+}
+
+.work-experience2::after {
+    content: "Creating a layout for a promo page to promote mini-landing pages -";
+} */
+
 a {
     text-decoration: none;
 }
