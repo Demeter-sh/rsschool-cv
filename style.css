@@ -4,10 +4,6 @@
     box-sizing: border-box;
 }
 
-.img-wrap {
-    padding-left: 30px;
-}
-
 .contacts-ul {
     list-style: none;
     margin: 0;
@@ -17,23 +13,33 @@
     border: 1px solid black;
 }
 
-/* .work-experience2::before {
-    content: "Creating a page for the Lapkin Lab website using the AmoCRM system -" ;
+.flex-container {
+    width: 100%;
+    background-color: whitesmoke;
+    display: flex;
 }
 
-.work-experience2::after {
-    content: "Creating a layout for a promo page to promote mini-landing pages -";
-} */
+.flex-item1 {
+    margin: 30px 30px;
+    flex-basis: 640px;
+    flex-shrink: 3;
+}
+
+.flex-item2 {
+    margin: 30px 30px;
+    flex-basis: 1280px;
+    flex-shrink: 1;
+}
+
+header > .flex-item1 {
+    align-self: center;
+}
 
 a {
     text-decoration: none;
 }
 
-h2 {
-    margin: 15px 0;
-}
-
-h3 {
+h2, h3 {
     margin: 15px 0;
 }
 
@@ -45,113 +51,55 @@ p {
     margin: 5px 0;
 }
 
-span {
-    display: inline-block;
-    margin: 4px 0;
-}
-
 ul {
     margin: 10px 0 10px 15px;
 }
 
-body {
-    background-color: white;
-}
-
-body > div:first-child {
+body > div {
     margin: 0 auto;
-    max-width: 1920px;
-    width: 100%;
-    display: grid;
-    grid-template-columns: repeat(3, minmax(100px, 640px));
-    /* grid-row: repeat(3, 1fr); */
     background-color: whitesmoke;
-}
-
-header {
-    display: flex;
-    margin-top: 30px;
-    grid-column: 1 / span 3;
-    grid-row: 1 /span1;
-}
-
-header > div{
-    margin: 0 30px 30px 0;
-}
-
-header > div:first-child {
-    max-width: 640px;
-    width: 100%;
-    min-width: 100px;
-    flex-shrink: 2;
-}
-
-header > div:nth-child(2) {
-    padding-left: 50px;
-    max-width: 1280px;
-    width: 100%;
-    min-width: 200px;
+    max-width: 1920px;
 }
 
 header img {
-    max-width: 200px;
-    width: 100%;
-    height: auto;
+    max-width: 9em;
     border-radius: 100px;
-}
-
-main {
-    /* margin: 30px 30px; */
-    grid-column: 2 / 4;
 }
 
 main nav {
     margin-left: 15px;
 }
 
-article.first-column {
-    grid-column: 1 / span 1;
-    grid-row: 2 / span 1;
-}
-
-article {
-    margin: 30px 30px;
-}
-
 section {
     margin: 20px 0;
 }
 
-footer {
-    grid-column: 1 / span 3;
-    justify-self: center;
+section > span {
+    display: inline-block;
+    margin: 4px 0;
 }
 
 footer img {
     width: 100px;
 }
 
-@media (max-width: 480px) {
-    /* body > div:first-child {
-        justify-items: center;
-    } */
+footer > div {
+    width: fit-content;
+    margin: 0 auto;
+}
 
-    header {
-        flex-direction: column;
+@media screen and (min-width: 1919px ) {
+    .flex-item1 {
+        text-align: center;
     }
+}
 
-    header > div, header > div:nth-child(2) {
-        padding-left: 30px;
+@media screen and (max-width: 470px) {
+    .flex-container {
+        flex-wrap: wrap;
     }
-
-    article.first-column {
-        margin-left: 30px;
-        grid-column: 1 / span 2;
-        grid-row: 2 / span 1;
-    }
-
-    main {
-        grid-column: 1 / span 3;
-        grid-row: 3 / span 1;
+    
+    .flex-item1 {
+        text-align: center;
     }
 }
